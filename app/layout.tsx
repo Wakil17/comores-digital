@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter, Source_Serif_4 } from 'next/font/google'
+import { Inter, Source_Serif_4, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
@@ -16,6 +16,14 @@ const sourceSerif = Source_Serif_4({
   style: ['normal', 'italic'],
 })
 
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-cormorant',
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+})
+
 export const metadata: Metadata = {
   title: 'Comores Digital — Solutions numériques pour les Comores',
   description:
@@ -28,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr" className={`${inter.variable} ${sourceSerif.variable}`}>
+    <html lang="fr" className={`${inter.variable} ${sourceSerif.variable} ${cormorant.variable}`}>
       <body>{children}</body>
     </html>
   )

@@ -36,7 +36,7 @@
 @keyframes hero-fade-up {
   from {
     opacity: 0;
-    transform: translateY(22px);
+    transform: translateY(24px);
   }
   to {
     opacity: 1;
@@ -48,7 +48,7 @@
 .hero-animate-2 { animation: hero-fade-up 0.70s cubic-bezier(0.22, 1, 0.36, 1) 0.18s both; }
 .hero-animate-3 { animation: hero-fade-up 0.70s cubic-bezier(0.22, 1, 0.36, 1) 0.32s both; }
 .hero-animate-4 { animation: hero-fade-up 0.70s cubic-bezier(0.22, 1, 0.36, 1) 0.44s both; }
-.hero-animate-5 { animation: hero-fade-up 0.70s cubic-bezier(0.22, 1, 0.36, 1) 0.58s both; }
+.hero-animate-5 { animation: hero-fade-up 0.70s cubic-bezier(0.22, 1, 0.36, 1) 0.56s both; }
 
 /* ─── Scroll reveal ─────────────────────────────────────────── */
 .reveal {
@@ -64,7 +64,7 @@
   transform: translateY(0);
 }
 
-/* ─── Card hover (green accent) ─────────────────────────────── */
+/* ─── Card hover — light backgrounds ────────────────────────── */
 .card-hover {
   position: relative;
   transition: background-color 0.22s ease;
@@ -92,5 +92,40 @@
 }
 
 .card-hover .card-title {
+  transition: color 0.22s ease;
+}
+
+/* ─── Card hover — dark/forest backgrounds ───────────────────── */
+.dark-card-hover {
+  position: relative;
+  transition: background-color 0.22s ease;
+}
+
+.dark-card-hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #007A5F;
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.dark-card-hover:hover::after {
+  transform: scaleY(1);
+}
+
+.dark-card-hover:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+.dark-card-hover:hover .dark-card-title {
+  color: #4EB894;
+}
+
+.dark-card-hover .dark-card-title {
   transition: color 0.22s ease;
 }

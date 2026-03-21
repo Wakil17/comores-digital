@@ -29,8 +29,9 @@ const pillars = [
 
 export default function Approach() {
   return (
-    <section id="approche" className="py-24 section-padding bg-bg-primary border-t border-border-light">
+    <section id="approche" className="py-24 section-padding bg-bg-forest border-t border-[#1a3d2b]">
       <div className="container-wide">
+
         {/* Header */}
         <Reveal className="mb-14">
           <div className="flex items-center gap-3 mb-6">
@@ -39,28 +40,28 @@ export default function Approach() {
               Approche
             </span>
           </div>
-          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-primary leading-snug max-w-xl">
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-white leading-snug max-w-xl">
             Une méthode structurée, pas un discours
           </h2>
         </Reveal>
 
         {/* Pillars */}
-        <div className="grid md:grid-cols-3 gap-px bg-border-light border border-border-light">
+        <div className="grid md:grid-cols-3 gap-px bg-[#1a3d2b] border border-[#1a3d2b]">
           {pillars.map((pillar, i) => (
             <Reveal key={i} delay={i * 90}>
-              <div className="card-hover bg-bg-primary p-8 md:p-10 h-full cursor-default">
+              <div className="dark-card-hover bg-bg-forest p-8 md:p-10 h-full cursor-default">
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="font-sans text-xs text-text-tertiary tracking-widest">
+                  <span className="font-sans text-xs text-white/30 tracking-widest">
                     {pillar.index}
                   </span>
-                  <span className="block flex-1 h-px bg-border-light" />
+                  <span className="block flex-1 h-px bg-[#1a3d2b]" />
                 </div>
-                <h3 className="card-title font-serif text-xl font-semibold text-text-primary mb-5 leading-snug">
+                <h3 className="dark-card-title font-serif text-xl font-semibold text-white mb-5 leading-snug">
                   {pillar.title}
                 </h3>
                 <div className="space-y-4">
                   {pillar.body.map((p, j) => (
-                    <p key={j} className="font-sans text-sm text-text-secondary leading-relaxed">
+                    <p key={j} className="font-sans text-sm text-white/55 leading-relaxed">
                       {p}
                     </p>
                   ))}

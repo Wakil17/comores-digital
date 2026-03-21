@@ -14,18 +14,24 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-200 ${
-        scrolled ? 'bg-bg-primary/95 backdrop-blur-sm' : 'bg-bg-primary'
-      } border-b border-border-light`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-bg-primary/95 backdrop-blur-md shadow-[0_1px_0_#E4E4E0]'
+          : 'bg-bg-primary border-b border-border-light'
+      }`}
     >
       <div className="container-wide section-padding">
         <div className="flex items-center justify-between h-16">
+
           {/* Logo */}
-          <div className="flex flex-col">
-            <span className="font-serif text-xl font-semibold tracking-tight text-text-primary">
+          <div className="flex flex-col leading-none">
+            <span
+              className="font-logo font-semibold text-text-primary"
+              style={{ fontSize: '1.55rem', letterSpacing: '-0.01em', lineHeight: 1 }}
+            >
               Comores Digital
             </span>
-            <span className="text-[11px] font-sans text-text-tertiary tracking-widest uppercase leading-none mt-0.5">
+            <span className="text-[10px] font-sans text-text-tertiary tracking-[0.18em] uppercase mt-1">
               Solutions numériques
             </span>
           </div>
@@ -64,14 +70,7 @@ export default function Header() {
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Menu"
           >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
               {menuOpen ? (
                 <path d="M4 4 L16 16 M16 4 L4 16" />
               ) : (
