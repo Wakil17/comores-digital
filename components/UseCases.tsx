@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const segments = [
   {
     label: 'Entreprises',
@@ -39,7 +41,7 @@ export default function UseCases() {
     <section className="py-24 section-padding bg-bg-secondary border-t border-border-light">
       <div className="container-wide">
         {/* Header */}
-        <div className="mb-14">
+        <Reveal className="mb-14">
           <div className="flex items-center gap-3 mb-6">
             <span className="block w-6 h-px bg-accent" />
             <span className="text-xs font-sans tracking-widest uppercase text-accent font-medium">
@@ -53,29 +55,31 @@ export default function UseCases() {
             Les bénéfices sont identifiables et mesurables. Voici ce que les solutions déployées permettent
             concrètement pour chaque type de bénéficiaire.
           </p>
-        </div>
+        </Reveal>
 
         {/* Three columns */}
         <div className="grid md:grid-cols-3 gap-px bg-border-light border border-border-light">
           {segments.map((seg, i) => (
-            <div key={i} className="bg-bg-primary p-8 md:p-10">
-              <h3 className="font-serif text-xl font-semibold text-text-primary mb-3">
-                {seg.label}
-              </h3>
-              <p className="font-sans text-sm text-text-secondary leading-relaxed mb-6">
-                {seg.intro}
-              </p>
-              <ul className="space-y-3">
-                {seg.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-3">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                    <span className="font-sans text-sm text-text-secondary leading-relaxed">
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <Reveal key={i} delay={i * 90}>
+              <div className="card-hover bg-bg-primary p-8 md:p-10 h-full cursor-default">
+                <h3 className="card-title font-serif text-xl font-semibold text-text-primary mb-3">
+                  {seg.label}
+                </h3>
+                <p className="font-sans text-sm text-text-secondary leading-relaxed mb-6">
+                  {seg.intro}
+                </p>
+                <ul className="space-y-3">
+                  {seg.items.map((item, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                      <span className="font-sans text-sm text-text-secondary leading-relaxed">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>

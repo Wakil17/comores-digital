@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const phases = [
   {
     phase: 'Phase 1',
@@ -42,7 +44,7 @@ export default function Roadmap() {
     <section id="feuille-de-route" className="py-24 section-padding bg-bg-primary border-t border-border-light">
       <div className="container-wide">
         {/* Header */}
-        <div className="mb-14">
+        <Reveal className="mb-14">
           <div className="flex items-center gap-3 mb-6">
             <span className="block w-6 h-px bg-accent" />
             <span className="text-xs font-sans tracking-widest uppercase text-accent font-medium">
@@ -56,46 +58,45 @@ export default function Roadmap() {
             Le développement de Comores Digital s'inscrit dans la durée. Les ambitions sont claires, mais l'approche
             reste pragmatique : avancer étape par étape, valider ce qui fonctionne et construire sur des fondations solides.
           </p>
-        </div>
+        </Reveal>
 
         {/* Phases */}
-        <div className="grid md:grid-cols-3 gap-0 border border-border-light">
+        <div className="grid md:grid-cols-3 gap-px bg-border-light border border-border-light">
           {phases.map((p, i) => (
-            <div
-              key={i}
-              className={`p-8 md:p-10 ${i < phases.length - 1 ? 'border-b md:border-b-0 md:border-r border-border-light' : ''}`}
-            >
-              {/* Phase label */}
-              <div className="flex items-center gap-3 mb-6">
-                <span className="inline-block font-sans text-xs text-accent border border-accent px-2 py-0.5 tracking-wide">
-                  {p.phase}
-                </span>
-                <span className="font-sans text-xs text-text-tertiary">
-                  {p.horizon}
-                </span>
+            <Reveal key={i} delay={i * 90}>
+              <div className="card-hover bg-bg-primary p-8 md:p-10 h-full cursor-default">
+                {/* Phase label */}
+                <div className="flex items-center gap-3 mb-6">
+                  <span className="inline-block font-sans text-xs text-accent border border-accent px-2 py-0.5 tracking-wide">
+                    {p.phase}
+                  </span>
+                  <span className="font-sans text-xs text-text-tertiary">
+                    {p.horizon}
+                  </span>
+                </div>
+
+                <h3 className="card-title font-serif text-xl font-semibold text-text-primary mb-5 leading-snug">
+                  {p.title}
+                </h3>
+
+                <ul className="space-y-3 mb-6">
+                  {p.items.map((item, j) => (
+                    <li key={j} className="flex items-start gap-3">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-border-medium shrink-0" />
+                      <span className="font-sans text-sm text-text-secondary leading-relaxed">
+                        {item}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="border-t border-border-light pt-4">
+                  <p className="font-sans text-xs text-text-tertiary italic leading-relaxed">
+                    {p.note}
+                  </p>
+                </div>
               </div>
-
-              <h3 className="font-serif text-xl font-semibold text-text-primary mb-5 leading-snug">
-                {p.title}
-              </h3>
-
-              <ul className="space-y-3 mb-6">
-                {p.items.map((item, j) => (
-                  <li key={j} className="flex items-start gap-3">
-                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-border-medium shrink-0" />
-                    <span className="font-sans text-sm text-text-secondary leading-relaxed">
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="border-t border-border-light pt-4">
-                <p className="font-sans text-xs text-text-tertiary italic leading-relaxed">
-                  {p.note}
-                </p>
-              </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

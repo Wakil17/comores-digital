@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const services = [
   {
     number: '01',
@@ -61,8 +63,9 @@ export default function Services() {
   return (
     <section id="offres" className="py-24 section-padding bg-bg-secondary border-t border-border-light">
       <div className="container-wide">
+
         {/* Header */}
-        <div className="mb-14">
+        <Reveal className="mb-14">
           <div className="flex items-center gap-3 mb-6">
             <span className="block w-6 h-px bg-accent" />
             <span className="text-xs font-sans tracking-widest uppercase text-accent font-medium">
@@ -76,39 +79,39 @@ export default function Services() {
             Chaque intervention est cadrée à partir d'un besoin concret. L'objectif n'est pas de vendre une solution
             standard, mais de concevoir une réponse adaptée au contexte et au niveau de maturité du client.
           </p>
-        </div>
+        </Reveal>
 
         {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-border-light border border-border-light">
-          {services.map((service) => (
-            <div
-              key={service.number}
-              className="bg-bg-primary p-8 hover:bg-bg-secondary transition-colors duration-150 group"
-            >
-              <div className="flex items-start justify-between mb-5">
-                <span className="font-sans text-xs text-text-tertiary tracking-widest">
-                  {service.number}
-                </span>
-              </div>
-              <h3 className="font-serif text-lg font-semibold text-text-primary mb-3 leading-snug">
-                {service.title}
-              </h3>
-              <p className="font-sans text-sm text-text-secondary leading-relaxed mb-6">
-                {service.description}
-              </p>
-              <div className="border-t border-border-light pt-4 space-y-2">
-                <div className="flex items-start gap-2">
-                  <span className="font-sans text-xs text-text-tertiary w-16 shrink-0 pt-px">Cible</span>
-                  <span className="font-sans text-xs text-text-secondary">{service.cible}</span>
+          {services.map((service, i) => (
+            <Reveal key={service.number} delay={Math.min(i % 3, 2) * 80}>
+              <div className="card-hover bg-bg-primary p-8 h-full group cursor-default">
+                <div className="flex items-start justify-between mb-5">
+                  <span className="font-sans text-xs text-text-tertiary tracking-widest">
+                    {service.number}
+                  </span>
                 </div>
-                <div className="flex items-start gap-2">
-                  <span className="font-sans text-xs text-text-tertiary w-16 shrink-0 pt-px">Objectif</span>
-                  <span className="font-sans text-xs text-text-secondary">{service.objectif}</span>
+                <h3 className="card-title font-serif text-lg font-semibold text-text-primary mb-3 leading-snug">
+                  {service.title}
+                </h3>
+                <p className="font-sans text-sm text-text-secondary leading-relaxed mb-6">
+                  {service.description}
+                </p>
+                <div className="border-t border-border-light pt-4 space-y-2">
+                  <div className="flex items-start gap-2">
+                    <span className="font-sans text-xs text-text-tertiary w-16 shrink-0 pt-px">Cible</span>
+                    <span className="font-sans text-xs text-text-secondary">{service.cible}</span>
+                  </div>
+                  <div className="flex items-start gap-2">
+                    <span className="font-sans text-xs text-text-tertiary w-16 shrink-0 pt-px">Objectif</span>
+                    <span className="font-sans text-xs text-text-secondary">{service.objectif}</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
+
       </div>
     </section>
   )

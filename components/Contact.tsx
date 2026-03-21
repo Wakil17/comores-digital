@@ -1,10 +1,12 @@
+import Reveal from './Reveal'
+
 export default function Contact() {
   return (
     <section id="contact" className="py-24 section-padding bg-bg-primary border-t border-border-light">
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left */}
-          <div>
+          <Reveal>
             <div className="flex items-center gap-3 mb-6">
               <span className="block w-6 h-px bg-accent" />
               <span className="text-xs font-sans tracking-widest uppercase text-accent font-medium">
@@ -90,10 +92,10 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* Right: form */}
-          <div>
+          <Reveal delay={100}>
             <form
               onSubmit={(e) => e.preventDefault()}
               className="border border-border-light p-8 space-y-5"
@@ -166,7 +168,7 @@ export default function Contact() {
                 Envoyer le message
               </button>
             </form>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

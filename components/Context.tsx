@@ -1,3 +1,5 @@
+import Reveal from './Reveal'
+
 const frictions = [
   {
     label: 'Processus encore très manuels',
@@ -27,7 +29,7 @@ export default function Context() {
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: text */}
-          <div>
+          <Reveal>
             <div className="flex items-center gap-3 mb-6">
               <span className="block w-6 h-px bg-accent" />
               <span className="text-xs font-sans tracking-widest uppercase text-accent font-medium">
@@ -46,22 +48,21 @@ export default function Context() {
               Comores Digital intervient pour apporter des réponses concrètes, progressives et adaptées au terrain.
               Non pas des solutions importées sans discernement, mais des outils pensés à partir des réalités locales.
             </p>
-          </div>
+          </Reveal>
 
           {/* Right: friction cards */}
           <div className="grid sm:grid-cols-2 gap-4">
             {frictions.map((item, i) => (
-              <div
-                key={i}
-                className="border border-border-light p-5 bg-bg-secondary"
-              >
-                <p className="font-sans text-sm font-semibold text-text-primary mb-2">
-                  {item.label}
-                </p>
-                <p className="font-sans text-sm text-text-secondary leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
+              <Reveal key={i} delay={i * 70}>
+                <div className="card-hover border border-border-light p-5 bg-bg-secondary h-full cursor-default">
+                  <p className="card-title font-sans text-sm font-semibold text-text-primary mb-2">
+                    {item.label}
+                  </p>
+                  <p className="font-sans text-sm text-text-secondary leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
