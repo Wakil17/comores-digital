@@ -24,7 +24,7 @@ export default function Hero() {
             <div className="hero-animate-1 flex items-center gap-3 mb-10">
               <span className="block w-5 h-px bg-accent" />
               <span className="text-[11px] font-sans tracking-[0.2em] uppercase text-accent font-medium">
-                Moroni, Union des Comores
+                Iconi, Union des Comores
               </span>
             </div>
 

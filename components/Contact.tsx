@@ -67,7 +67,7 @@ export default function Contact() {
                 <div>
                   <p className="font-sans text-xs text-text-tertiary mb-1 tracking-wide uppercase">Localisation</p>
                   <p className="font-sans text-sm text-text-primary">
-                    Moroni, Union des Comores
+                    Iconi, Union des Comores
                   </p>
                 </div>
               </div>

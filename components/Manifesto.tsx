@@ -26,7 +26,7 @@ export default function Manifesto() {
           </p>
           <p className="font-sans text-base text-[#A0A09C] leading-relaxed max-w-2xl mb-12">
             Il ne s'agit pas de promettre des transformations abstraites, mais de contribuer concrètement
-            à ce que les services soient plus accessibles, les processus plus fiables et les usages plus clairs —
+            à ce que les services soient plus accessibles, les processus plus fiables et les usages plus clairs
             pour ceux qui en ont le plus besoin.
           </p>
         </Reveal>

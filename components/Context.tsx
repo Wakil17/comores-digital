@@ -46,7 +46,7 @@ export default function Context() {
             </p>
             <p className="font-sans text-base text-text-secondary leading-relaxed">
               Comores Digital intervient pour apporter des réponses concrètes, progressives et adaptées au terrain.
-              Non pas des solutions importées sans discernement, mais des outils pensés à partir des réalités locales.
+              Pas des solutions importées sans discernement, mais des outils pensés à partir des réalités locales.
             </p>
           </Reveal>
 

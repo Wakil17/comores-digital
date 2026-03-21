@@ -3,7 +3,7 @@ import Reveal from './Reveal'
 const services = [
   {
     number: '01',
-    title: 'Sites web professionnels',
+    title: 'Sites Web professionnels',
     description:
       'Présence en ligne claire, crédible et maintenable pour entreprises, commerces et institutions.',
     cible: 'Entreprises, commerçants, associations',

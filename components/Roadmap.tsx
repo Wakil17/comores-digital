@@ -35,7 +35,7 @@ const phases = [
       "Élargir progressivement le périmètre d'intervention",
       'Participer activement à la montée en maturité numérique du pays',
     ],
-    note: 'La consolidation se construit sur la réputation bâtie lors des phases précédentes.',
+    note: 'L’évolution repose sur des résultats concrets et des solutions déjà éprouvées.',
   },
 ]
 

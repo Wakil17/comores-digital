@@ -64,7 +64,7 @@ export default function Footer() {
               </li>
               <li>
                 <span className="font-sans text-sm text-white/45">
-                  Moroni, Union des Comores
+                  Iconi, Union des Comores
                 </span>
               </li>
             </ul>
@@ -77,7 +77,7 @@ export default function Footer() {
             © {year} Comores Digital. Tous droits réservés.
           </p>
           <p className="font-sans text-xs text-white/25">
-            Structure en développement — Moroni, Union des Comores
+            Structure en développement - Iconi, Union des Comores
           </p>
         </div>
       </div>

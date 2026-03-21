@@ -14,7 +14,7 @@ const pillars = [
     title: 'Exécution technique sérieuse',
     body: [
       "Les solutions conçues sont claires, documentées, maintenables et sécurisées. La complexité n'est introduite que là où elle est strictement nécessaire.",
-      "La qualité d'exécution n'est pas négociable : elle conditionne la durée de vie et la pertinence réelle de chaque outil déployé.",
+      "La qualité d'exécution n'est pas négociable, elle conditionne la durée de vie et la pertinence réelle de chaque outil déployé.",
     ],
   },
   {
@@ -41,7 +41,7 @@ export default function Approach() {
             </span>
           </div>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-white leading-snug max-w-xl">
-            Une méthode structurée, pas un discours
+            Une méthode structurée
           </h2>
         </Reveal>
 
