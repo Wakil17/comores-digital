@@ -1,0 +1,74 @@
+const pillars = [
+  {
+    index: '01',
+    title: 'Compréhension du terrain',
+    body: [
+      'Toute intervention commence par une lecture attentive du contexte : usages réels, contraintes locales, niveau de maturité numérique, ressources disponibles.',
+      'Cette phase de diagnostic évite de déployer des solutions inadaptées et permet d'identifier les leviers les plus efficaces.',
+    ],
+  },
+  {
+    index: '02',
+    title: 'Exécution technique sérieuse',
+    body: [
+      'Les solutions conçues sont claires, documentées, maintenables et sécurisées. La complexité n'est introduite que là où elle est strictement nécessaire.',
+      'La qualité d'exécution n'est pas négociable : elle conditionne la durée de vie et la pertinence réelle de chaque outil déployé.',
+    ],
+  },
+  {
+    index: '03',
+    title: 'Déploiement progressif',
+    body: [
+      'Commencer par ce qui est utile, le valider sur le terrain, puis étendre ce qui fonctionne. Cette méthode limite le risque, réduit les coûts d'erreur et produit des résultats mesurables à chaque étape.',
+      'L'objectif est de construire des bases stables avant d'élargir le périmètre.',
+    ],
+  },
+]
+
+export default function Approach() {
+  return (
+    <section id="approche" className="py-24 section-padding bg-bg-primary border-t border-border-light">
+      <div className="container-wide">
+        {/* Header */}
+        <div className="mb-14">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="block w-6 h-px bg-accent" />
+            <span className="text-xs font-sans tracking-widest uppercase text-accent font-medium">
+              Approche
+            </span>
+          </div>
+          <h2 className="font-serif text-3xl md:text-4xl font-semibold text-text-primary leading-snug max-w-xl">
+            Une méthode structurée, pas un discours
+          </h2>
+        </div>
+
+        {/* Pillars */}
+        <div className="grid md:grid-cols-3 gap-0 border border-border-light">
+          {pillars.map((pillar, i) => (
+            <div
+              key={i}
+              className={`p-8 md:p-10 ${i < pillars.length - 1 ? 'border-b md:border-b-0 md:border-r border-border-light' : ''}`}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <span className="font-sans text-xs text-text-tertiary tracking-widest">
+                  {pillar.index}
+                </span>
+                <span className="block flex-1 h-px bg-border-light" />
+              </div>
+              <h3 className="font-serif text-xl font-semibold text-text-primary mb-5 leading-snug">
+                {pillar.title}
+              </h3>
+              <div className="space-y-4">
+                {pillar.body.map((p, j) => (
+                  <p key={j} className="font-sans text-sm text-text-secondary leading-relaxed">
+                    {p}
+                  </p>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
