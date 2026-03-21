@@ -36,7 +36,7 @@ export default function Manifesto() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
             <a
               href="#contact"
-              className="inline-block font-sans text-sm px-6 py-3 bg-accent text-white hover:bg-[#006650] transition-colors duration-150"
+              className="inline-block font-sans text-sm px-6 py-3 bg-accent text-white hover:bg-[#004A36] transition-colors duration-150"
             >
               Présenter un besoin
             </a>

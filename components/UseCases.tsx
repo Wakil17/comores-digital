@@ -15,7 +15,7 @@ const segments = [
   {
     label: 'Institutions',
     intro:
-      'Pour les institutions et structures publiques, l'enjeu est la lisibilité des services et la réduction des démarches en présentiel.',
+      "Pour les institutions et structures publiques, l'enjeu est la lisibilité des services et la réduction des démarches en présentiel.",
     items: [
       'Rendre les informations publiques plus accessibles et mieux organisées',
       'Limiter les déplacements inutiles grâce à des services en ligne',
@@ -26,12 +26,12 @@ const segments = [
   {
     label: 'Usagers',
     intro:
-      'Pour les citoyens et utilisateurs finaux, l'objectif est de simplifier l'accès aux services et d'améliorer la qualité d'expérience.',
+      "Pour les citoyens et utilisateurs finaux, l'objectif est de simplifier l'accès aux services et d'améliorer la qualité d'expérience.",
     items: [
-      'Accéder plus simplement à l'information sans multiplier les intermédiaires',
+      "Accéder plus simplement à l'information sans multiplier les intermédiaires",
       'Utiliser un service sans nécessiter un déplacement physique systématique',
-      'Bénéficier d'une expérience claire, fluide et sans ambiguïté',
-      'Gagner en autonomie et en continuité dans l'accès aux services',
+      "Bénéficier d'une expérience claire, fluide et sans ambiguïté",
+      "Gagner en autonomie et en continuité dans l'accès aux services",
     ],
   },
 ]

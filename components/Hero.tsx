@@ -51,7 +51,7 @@ export default function Hero() {
             <div className="hero-animate-4 flex flex-col sm:flex-row items-start gap-4">
               <a
                 href="#contact"
-                className="inline-block font-sans text-sm font-medium px-7 py-3.5 bg-accent text-white hover:bg-[#006650] transition-colors duration-200 tracking-wide"
+                className="inline-block font-sans text-sm font-medium px-7 py-3.5 bg-accent text-white hover:bg-[#004A36] transition-colors duration-200 tracking-wide"
               >
                 Échanger sur un besoin
               </a>
@@ -119,24 +119,27 @@ export default function Hero() {
       </div>
 
       {/* ── Stats bar ── */}
-      <div className="hero-animate-5 bg-bg-dark border-t border-[#252523]">
+      <div className="hero-animate-5 bg-bg-forest border-t border-[#1a3d2b]">
         <div className="container-wide section-padding">
-          <div className="grid grid-cols-3 divide-x divide-[#252523]">
-            <div className="py-5 pr-8">
-              <span className="block font-serif text-2xl font-semibold text-white mb-0.5">7</span>
-              <span className="block font-sans text-[0.6rem] text-white/35 uppercase tracking-widest">
+          <div className="grid grid-cols-3 divide-x divide-[#1a3d2b]">
+            <div className="py-7 pr-8">
+              <div className="w-5 h-px bg-accent mb-3" />
+              <span className="block font-serif text-[1.75rem] font-semibold text-white mb-1 leading-none">6</span>
+              <span className="block font-sans text-[0.6rem] text-white/40 uppercase tracking-widest">
                 domaines d'intervention
               </span>
             </div>
-            <div className="py-5 px-8">
-              <span className="block font-serif text-2xl font-semibold text-white mb-0.5">100&nbsp;%</span>
-              <span className="block font-sans text-[0.6rem] text-white/35 uppercase tracking-widest">
+            <div className="py-7 px-8">
+              <div className="w-5 h-px bg-accent mb-3" />
+              <span className="block font-serif text-[1.75rem] font-semibold text-white mb-1 leading-none">100&nbsp;%</span>
+              <span className="block font-sans text-[0.6rem] text-white/40 uppercase tracking-widest">
                 solutions sur mesure
               </span>
             </div>
-            <div className="py-5 pl-8">
-              <span className="block font-serif text-2xl font-semibold text-white mb-0.5">Local</span>
-              <span className="block font-sans text-[0.6rem] text-white/35 uppercase tracking-widest">
+            <div className="py-7 pl-8">
+              <div className="w-5 h-px bg-accent mb-3" />
+              <span className="block font-serif text-[1.75rem] font-semibold text-white mb-1 leading-none">Local</span>
+              <span className="block font-sans text-[0.6rem] text-white/40 uppercase tracking-widest">
                 ancrage comorien
               </span>
             </div>

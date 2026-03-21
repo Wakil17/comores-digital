@@ -7,7 +7,7 @@ const frictions = [
       'De nombreuses démarches reposent sur des étapes papier, des intermédiaires physiques et des délais allongés.',
   },
   {
-    label: 'Information difficile d'accès',
+    label: "Information difficile d'accès",
     description:
       'Les usagers peinent souvent à trouver des renseignements fiables, actualisés et accessibles en ligne.',
   },
@@ -19,13 +19,13 @@ const frictions = [
   {
     label: 'Faible continuité de service numérique',
     description:
-      'L'interruption du service dès la fermeture des bureaux crée une discontinuité pénalisante pour les usagers.',
+      "L'interruption du service dès la fermeture des bureaux crée une discontinuité pénalisante pour les usagers.",
   },
 ]
 
 export default function Context() {
   return (
-    <section className="py-24 section-padding bg-bg-primary">
+    <section className="py-24 section-padding bg-bg-primary border-t border-border-light">
       <div className="container-wide">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left: text */}
@@ -54,7 +54,7 @@ export default function Context() {
           <div className="grid sm:grid-cols-2 gap-4">
             {frictions.map((item, i) => (
               <Reveal key={i} delay={i * 70}>
-                <div className="card-hover border border-border-light p-5 bg-bg-secondary h-full cursor-default">
+                <div className="card-hover border border-border-light p-5 bg-bg-primary h-full cursor-default">
                   <p className="card-title font-sans text-sm font-semibold text-text-primary mb-2">
                     {item.label}
                   </p>

@@ -1,3 +1,5 @@
+'use client'
+
 export default function Footer() {
   const year = new Date().getFullYear()
 
@@ -28,7 +30,7 @@ export default function Footer() {
             </p>
             <ul className="space-y-3">
               {[
-                { label: 'Domaines d'intervention', href: '#domaines' },
+                { label: "Domaines d'intervention", href: '#domaines' },
                 { label: 'Offres & services', href: '#offres' },
                 { label: 'Notre approche', href: '#approche' },
                 { label: 'Feuille de route', href: '#feuille-de-route' },

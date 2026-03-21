@@ -29,7 +29,7 @@ const services = [
     number: '04',
     title: 'Systèmes métier sur mesure',
     description:
-      'Réponses ciblées à des problèmes opérationnels : paiement, gestion usagers, formulaires, tableaux de bord.',
+      'Réponses ciblées à des problèmes opérationnels : paiement, gestion usagers, formulaires, tableaux de bord. Sécurité intégrée dès la conception pour protéger les données sensibles.',
     cible: 'Toute organisation avec des processus à fiabiliser',
     objectif: 'Réduire la friction opérationnelle et gagner en efficacité',
   },
@@ -37,20 +37,12 @@ const services = [
     number: '05',
     title: 'Hébergement & infrastructure',
     description:
-      'Déploiement, maintenance, architecture simple et fiable, cloud ou hybride selon le besoin.',
-    cible: 'Structures ayant besoin de fiabilité technique',
-    objectif: 'Assurer la disponibilité et la pérennité des services',
+      'Déploiement, maintenance, architecture fiable, cloud ou hybride. Bonnes pratiques de cybersécurité appliquées : accès contrôlés, sauvegardes, hygiène numérique.',
+    cible: 'Structures ayant besoin de fiabilité et de sécurité technique',
+    objectif: 'Assurer la disponibilité, la pérennité et la sécurité des services',
   },
   {
     number: '06',
-    title: 'Cybersécurité & bonnes pratiques',
-    description:
-      "Sécurité intégrée dès la conception, recommandations, hygiène numérique et réduction du risque.",
-    cible: 'Entreprises, institutions, PME',
-    objectif: 'Protéger les données et les systèmes de manière pragmatique',
-  },
-  {
-    number: '07',
     title: 'Accompagnement & sensibilisation',
     description:
       'Montée en compétence, adoption des outils, structuration des usages numériques.',

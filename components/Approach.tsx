@@ -6,23 +6,23 @@ const pillars = [
     title: 'Compréhension du terrain',
     body: [
       'Toute intervention commence par une lecture attentive du contexte : usages réels, contraintes locales, niveau de maturité numérique, ressources disponibles.',
-      'Cette phase de diagnostic évite de déployer des solutions inadaptées et permet d'identifier les leviers les plus efficaces.',
+      "Cette phase de diagnostic évite de déployer des solutions inadaptées et permet d'identifier les leviers les plus efficaces.",
     ],
   },
   {
     index: '02',
     title: 'Exécution technique sérieuse',
     body: [
-      'Les solutions conçues sont claires, documentées, maintenables et sécurisées. La complexité n'est introduite que là où elle est strictement nécessaire.',
-      'La qualité d'exécution n'est pas négociable : elle conditionne la durée de vie et la pertinence réelle de chaque outil déployé.',
+      "Les solutions conçues sont claires, documentées, maintenables et sécurisées. La complexité n'est introduite que là où elle est strictement nécessaire.",
+      "La qualité d'exécution n'est pas négociable : elle conditionne la durée de vie et la pertinence réelle de chaque outil déployé.",
     ],
   },
   {
     index: '03',
     title: 'Déploiement progressif',
     body: [
-      'Commencer par ce qui est utile, le valider sur le terrain, puis étendre ce qui fonctionne. Cette méthode limite le risque, réduit les coûts d'erreur et produit des résultats mesurables à chaque étape.',
-      'L'objectif est de construire des bases stables avant d'élargir le périmètre.',
+      "Commencer par ce qui est utile, le valider sur le terrain, puis étendre ce qui fonctionne. Cette méthode limite le risque, réduit les coûts d'erreur et produit des résultats mesurables à chaque étape.",
+      "L'objectif est de construire des bases stables avant d'élargir le périmètre.",
     ],
   },
 ]

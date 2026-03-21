@@ -1,3 +1,5 @@
+'use client'
+
 import Reveal from './Reveal'
 
 export default function Contact() {
@@ -30,7 +32,7 @@ export default function Contact() {
                     height="18"
                     viewBox="0 0 18 18"
                     fill="none"
-                    stroke="#007A5F"
+                    stroke="#005F45"
                     strokeWidth="1.5"
                   >
                     <path d="M3 4h12v10H3z" />
@@ -55,7 +57,7 @@ export default function Contact() {
                     height="18"
                     viewBox="0 0 18 18"
                     fill="none"
-                    stroke="#007A5F"
+                    stroke="#005F45"
                     strokeWidth="1.5"
                   >
                     <circle cx="9" cy="7.5" r="2.5" />
@@ -77,7 +79,7 @@ export default function Contact() {
                     height="18"
                     viewBox="0 0 18 18"
                     fill="none"
-                    stroke="#007A5F"
+                    stroke="#005F45"
                     strokeWidth="1.5"
                   >
                     <circle cx="9" cy="9" r="7" />
@@ -163,7 +165,7 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full font-sans text-sm px-6 py-3 bg-accent text-white hover:bg-[#006650] transition-colors duration-150"
+                className="w-full font-sans text-sm px-6 py-3 bg-accent text-white hover:bg-[#004A36] transition-colors duration-150"
               >
                 Envoyer le message
               </button>

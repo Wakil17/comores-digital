@@ -19,8 +19,8 @@ const config: Config = {
         'text-tertiary': '#8A8A86',
         'border-light': '#E4E4E0',
         'border-medium': '#C8C8C4',
-        'accent': '#007A5F',
-        'accent-light': '#E6F5F1',
+        'accent': '#00A86B',
+        'accent-light': '#D1FAE5',
       },
       fontFamily: {
         serif: ['var(--font-source-serif)', 'Georgia', 'serif'],

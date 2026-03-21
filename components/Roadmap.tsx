@@ -9,9 +9,9 @@ const phases = [
       'Livrer des premiers projets utiles et bien exécutés',
       'Documenter les réalisations et les apprentissages',
       'Construire des références crédibles sur le marché local',
-      'Affiner la méthode d'intervention à partir du terrain',
+      "Affiner la méthode d'intervention à partir du terrain",
     ],
-    note: 'La priorité est la qualité d'exécution, pas le volume.',
+    note: "La priorité est la qualité d'exécution, pas le volume.",
   },
   {
     phase: 'Phase 2',

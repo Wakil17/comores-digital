@@ -77,7 +77,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #007A5F;
+  background-color: #005F45;
   transform: scaleY(0);
   transform-origin: bottom center;
   transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
@@ -88,7 +88,7 @@
 }
 
 .card-hover:hover .card-title {
-  color: #007A5F;
+  color: #005F45;
 }
 
 .card-hover .card-title {
@@ -108,7 +108,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #007A5F;
+  background-color: #005F45;
   transform: scaleY(0);
   transform-origin: bottom center;
   transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
