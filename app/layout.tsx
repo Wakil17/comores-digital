@@ -25,7 +25,7 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: 'Comores Digital — Solutions numériques pour les Comores',
+  title: 'Comores Digital - Solutions numériques pour les Comores',
   description:
     'Comores Digital conçoit et déploie des outils numériques pour les entreprises, les services et les institutions comoriennes. Solutions web, SaaS, infrastructure, cybersécurité.',
 }

@@ -42,7 +42,7 @@ export default function Context() {
             <p className="font-sans text-base text-text-secondary leading-relaxed mb-5">
               Aux Comores, de nombreux services et activités reposent encore sur des processus manuels,
               peu lisibles ou insuffisamment numérisés. Cela génère des lenteurs, des déplacements inutiles,
-              des erreurs évitables et une expérience dégradée — pour les usagers comme pour les équipes.
+              des erreurs évitables et une expérience dégradée - pour les usagers comme pour les équipes.
             </p>
             <p className="font-sans text-base text-text-secondary leading-relaxed">
               Comores Digital intervient pour apporter des réponses concrètes, progressives et adaptées au terrain.

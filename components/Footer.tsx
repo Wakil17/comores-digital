@@ -56,15 +56,15 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="mailto:contact@comores-digital.com"
+                  href="mailto:contact@comoresdigital.com"
                   className="font-sans text-sm text-white/45 hover:text-accent transition-colors duration-150"
                 >
-                  contact@comores-digital.com
+                  contact@comoresdigital.com
                 </a>
               </li>
               <li>
                 <span className="font-sans text-sm text-white/45">
-                  Iconi, Union des Comores
+                  Union des Comores
                 </span>
               </li>
             </ul>
@@ -77,7 +77,7 @@ export default function Footer() {
             © {year} Comores Digital. Tous droits réservés.
           </p>
           <p className="font-sans text-xs text-white/25">
-            Structure en développement - Iconi, Union des Comores
+            Structure en développement - Union des Comores
           </p>
         </div>
       </div>

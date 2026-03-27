@@ -1,8 +1,34 @@
 'use client'
 
+import { useState, FormEvent } from 'react'
 import Reveal from './Reveal'
 
 export default function Contact() {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle')
+  const [form, setForm] = useState({ nom: '', organisation: '', email: '', sujet: '', message: '' })
+
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault()
+    setStatus('sending')
+
+    try {
+      const res = await fetch('/send-contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(form as Record<string, string>).toString(),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setStatus('success')
+        setForm({ nom: '', organisation: '', email: '', sujet: '', message: '' })
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
+
   return (
     <section id="contact" className="py-24 section-padding bg-bg-primary border-t border-border-light">
       <div className="container-wide">
@@ -20,7 +46,7 @@ export default function Contact() {
             </h2>
             <p className="font-sans text-base text-text-secondary leading-relaxed mb-8 max-w-md">
               Que ce soit pour un projet en cours de définition, une question technique ou un
-              accompagnement à la transition numérique — la première étape est un échange simple et sans engagement.
+              accompagnement à la transition numérique - la première étape est un échange simple et sans engagement.
             </p>
 
             {/* Info blocks */}
@@ -42,10 +68,10 @@ export default function Contact() {
                 <div>
                   <p className="font-sans text-xs text-text-tertiary mb-1 tracking-wide uppercase">Email</p>
                   <a
-                    href="mailto:contact@comores-digital.com"
+                    href="mailto:contact@comoresdigital.com"
                     className="font-sans text-sm text-text-primary hover:text-accent transition-colors"
                   >
-                    contact@comores-digital.com
+                    contact@comoresdigital.com
                   </a>
                 </div>
               </div>
@@ -67,7 +93,7 @@ export default function Contact() {
                 <div>
                   <p className="font-sans text-xs text-text-tertiary mb-1 tracking-wide uppercase">Localisation</p>
                   <p className="font-sans text-sm text-text-primary">
-                    Iconi, Union des Comores
+                    Union des Comores
                   </p>
                 </div>
               </div>
@@ -99,7 +125,7 @@ export default function Contact() {
           {/* Right: form */}
           <Reveal delay={100}>
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={handleSubmit}
               className="border border-border-light p-8 space-y-5"
             >
               <div className="grid sm:grid-cols-2 gap-5">
@@ -109,6 +135,10 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
+                    name="nom"
+                    required
+                    value={form.nom}
+                    onChange={(e) => setForm({ ...form, nom: e.target.value })}
                     placeholder="Votre nom"
                     className="w-full font-sans text-sm text-text-primary placeholder-text-tertiary border border-border-light bg-bg-primary px-4 py-3 outline-none focus:border-accent transition-colors"
                   />
@@ -119,7 +149,10 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
-                    placeholder="Entreprise, institution…"
+                    name="organisation"
+                    value={form.organisation}
+                    onChange={(e) => setForm({ ...form, organisation: e.target.value })}
+                    placeholder="Entreprise, institution..."
                     className="w-full font-sans text-sm text-text-primary placeholder-text-tertiary border border-border-light bg-bg-primary px-4 py-3 outline-none focus:border-accent transition-colors"
                   />
                 </div>
@@ -131,6 +164,10 @@ export default function Contact() {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  required
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
                   placeholder="votre@email.com"
                   className="w-full font-sans text-sm text-text-primary placeholder-text-tertiary border border-border-light bg-bg-primary px-4 py-3 outline-none focus:border-accent transition-colors"
                 />
@@ -140,7 +177,13 @@ export default function Contact() {
                 <label className="block font-sans text-xs text-text-tertiary tracking-wide uppercase mb-2">
                   Sujet
                 </label>
-                <select className="w-full font-sans text-sm text-text-secondary border border-border-light bg-bg-primary px-4 py-3 outline-none focus:border-accent transition-colors appearance-none">
+                <select
+                  name="sujet"
+                  required
+                  value={form.sujet}
+                  onChange={(e) => setForm({ ...form, sujet: e.target.value })}
+                  className="w-full font-sans text-sm text-text-secondary border border-border-light bg-bg-primary px-4 py-3 outline-none focus:border-accent transition-colors appearance-none"
+                >
                   <option value="">Sélectionner un domaine</option>
                   <option>Site web professionnel</option>
                   <option>Portail institutionnel</option>
@@ -157,18 +200,37 @@ export default function Contact() {
                   Message
                 </label>
                 <textarea
+                  name="message"
+                  required
                   rows={4}
-                  placeholder="Décrivez brièvement votre besoin ou votre projet…"
+                  value={form.message}
+                  onChange={(e) => setForm({ ...form, message: e.target.value })}
+                  placeholder="Décrivez brièvement votre besoin ou votre projet..."
                   className="w-full font-sans text-sm text-text-primary placeholder-text-tertiary border border-border-light bg-bg-primary px-4 py-3 outline-none focus:border-accent transition-colors resize-none"
                 />
               </div>
 
+              {/* Honeypot anti-spam */}
+              <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+
               <button
                 type="submit"
-                className="w-full font-sans text-sm px-6 py-3 bg-accent text-white hover:bg-[#004A36] transition-colors duration-150"
+                disabled={status === 'sending'}
+                className="w-full font-sans text-sm px-6 py-3 bg-accent text-white hover:bg-[#004A36] transition-colors duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Envoyer le message
+                {status === 'sending' ? 'Envoi en cours...' : 'Envoyer le message'}
               </button>
+
+              {status === 'success' && (
+                <p className="font-sans text-sm text-accent text-center">
+                  Message envoyé avec succès. Vous recevrez une confirmation par email.
+                </p>
+              )}
+              {status === 'error' && (
+                <p className="font-sans text-sm text-red-600 text-center">
+                  Une erreur est survenue. Veuillez réessayer ou nous contacter directement par email.
+                </p>
+              )}
             </form>
           </Reveal>
         </div>

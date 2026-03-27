@@ -5,7 +5,7 @@ export default function Hero() {
       {/* ── Split layout: left white / right forest ── */}
       <div className="flex flex-1 min-h-[calc(100vh-4rem)]">
 
-        {/* LEFT — Content */}
+        {/* LEFT - Content */}
         <div className="relative flex flex-col justify-center w-full lg:w-[58%] px-6 md:px-12 lg:px-20 xl:px-32 py-20 bg-bg-primary">
 
           {/* Subtle dot grid */}
@@ -24,7 +24,7 @@ export default function Hero() {
             <div className="hero-animate-1 flex items-center gap-3 mb-10">
               <span className="block w-5 h-px bg-accent" />
               <span className="text-[11px] font-sans tracking-[0.2em] uppercase text-accent font-medium">
-                Iconi, Union des Comores
+                Union des Comores
               </span>
             </div>
 
@@ -72,7 +72,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* RIGHT — Dark forest panel */}
+        {/* RIGHT - Dark forest panel */}
         <div className="hidden lg:flex flex-col justify-between w-[42%] bg-bg-forest px-14 py-20 relative overflow-hidden">
 
           {/* Decorative grid lines */}

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Reveal from './Reveal'; // Assurez-vous que ce composant est disponible pour les animations
 
 export default function Founder() {
@@ -11,13 +10,10 @@ export default function Founder() {
             <div className="flex-shrink-0 flex justify-start">
               <Reveal delay={80}> {/* Animation pour la photo */}
                 <div className="relative w-20 h-20 sm:w-36 sm:h-36 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border border-border-light shadow-sm">
-                  <Image
+                  <img
                     src="/images/wakil-portrait.jpg"
                     alt="Said Wakil Youssouf, Fondateur de Comores Digital"
-                    width={320}
-                    height={320}
-                    objectFit="cover"
-                    className="rounded-full"
+                    className="w-full h-full object-cover rounded-full"
                   />
                 </div>
               </Reveal>
